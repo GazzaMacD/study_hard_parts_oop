@@ -6,8 +6,13 @@ Learn the fundamentals of Object Oriented Programming in JavaScript for organizi
 
 ### 1. Object Creation
 
--   Store functions with associated data = principle of encapsulation
--
+#### Key Questions
+
+-   Having objects with access to their data and functionality is what principle of programming?
+-   Is this principle strictly applied in JS?
+-   Which method of object creation allows for fine grained control of what functionality is accessible?
+-   When using Object.create() to create a new object with no specific object as prototype, should we use null or {} as argument?
+-   Why?
 
 ### 2. Prototype and 'new'
 
