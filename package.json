@@ -1,0 +1,29 @@
+{
+    "name": "study_hard_parts_oop",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "Learn the fundamentals of Object Oriented Programming in JavaScript for organizing and scaling your code. You'll learn JavaScript’s prototypal design and how it works to enable the new ES6 classes under the hood. Understanding prototypes and classes in JavaScript is crucial for working with most modern frameworks and for those coming from traditional OOP languages.",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GazzaMacD/study_hard_parts_oop.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/GazzaMacD/study_hard_parts_oop/issues"
+    },
+    "homepage": "https://github.com/GazzaMacD/study_hard_parts_oop#readme",
+    "devDependencies": {
+        "@babel/preset-env": "^7.13.10",
+        "jest": "^26.6.3"
+    },
+    "dependencies": {
+        "@babel/core": "^7.13.10",
+        "@babel/node": "^7.13.10"
+    }
+}

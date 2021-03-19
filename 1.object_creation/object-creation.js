@@ -16,7 +16,7 @@ const userTwo = {
     name: "Bob",
     score: 7,
     increment: function () {
-        userOne.score += 1;
+        userTwo.score += 1;
     },
 };
 
@@ -26,10 +26,30 @@ const userTwo = {
  * the proto argument(an object or null) as the prototype
  */
 
-//const userThree = Object.create(null); <-- used by Will, but probably should use below
+//const userThree = Object.create(null); <-- used by Will, but just to be clear, usually better to use ({})
+// to avoid unusual behavior
 const userThree = Object.create({});
 userThree.name = "Hannah";
 userThree.score = 18;
 userThree.increment = function () {
     userThree.score += 1;
 };
+
+/*
+ *  Create object using a function
+ */
+
+function UserCreator(name, score) {
+    const newUser = {};
+    newUser.name = name;
+    newUser.score = score;
+    newUser.increment = function () {
+        newUser.score += 1;
+    };
+    return newUser;
+}
+// return the value assigned to newUser in the UserCreator
+// local execution context to be saved on each
+const userFour = UserCreator("John", 5);
+
+export { userOne, userTwo, userThree, userFour };
