@@ -52,4 +52,10 @@ function UserCreator(name, score) {
 // local execution context to be saved on each
 const userFour = UserCreator("John", 5);
 
+/*
+ *  The above approach is of course awful becuase we are creating a new copy of
+ * the functions on each user, memory nightmare
+ * We need only one copy of the increment function
+ */
+
 export { userOne, userTwo, userThree, userFour };
