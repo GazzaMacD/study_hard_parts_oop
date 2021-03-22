@@ -19,13 +19,24 @@ Learn the fundamentals of Object Oriented Programming in JavaScript for organizi
 
 -   How do we solve the problem presented above in the last question?
 -   How is the object created linking to the functionality of the prototype object passed to Object.create()?
--   Is '\_\_proto\_\_\' recommended in modern JS?
--   What is the alternative to '\_\_proto\_\_\'?
+-   Is `__proto__` recommended in modern JS?
+-   What is the alternative to `__proto__`?
 -   The 'new' keyword is doing two things for us, what are they?
 -   When using object creator functions designed to use 'new', how should we name them using commonly accepted nomenclature?
--   How would we now attatch shared functionality to the objects created by these object creator functions that are using 'new'
+-   A function is actually a combination of what and what?
+-   When a function such as below is defined, what is the property 'prototype' and where is it?
+
+```javascript
+function UserCreator(name, score) {
+    this.name = name;
+    this.score = score;
+}
+```
+
+-   How would we now attach shared functionality to the objects due to be created by the object creator function that will be used with the `new` keyword?
 -   Where are these functions stored?
--   When we use object.\_\_proto\_\_ or Object.getPrototypeOf(object), what is returned?
+-   When we use object.`__proto__` or `Object.getPrototypeOf(object)`, what is returned?
+-   If you don't use the 'new' keyword with the creator function, what does `this` refer to?
 
 ### 3. Scope and this
 
