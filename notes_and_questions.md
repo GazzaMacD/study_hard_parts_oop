@@ -10,7 +10,7 @@ Learn the fundamentals of Object Oriented Programming in JavaScript for organizi
 
 -   Having objects with access to their data and functionality is what principle of programming?
 -   Is this principle strictly applied in JS?
--   Which method of object creation allows for fine grained control of what functionality is accessible?
+-   Which method of object creation allows for fine grained control of the functionality is accessible to the object?
 -   When using Object.create() to create a new object with no specific object as prototype, should we use null or {} as argument?
 -   Why?
 -   What is the problem of making a new method per object?
