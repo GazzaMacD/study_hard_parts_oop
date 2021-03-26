@@ -81,8 +81,14 @@ UserCreator.prototype.increment = function () {
 
 ### 4. Default Prototype Chain
 
+-   Is the Object class an object, a function or both?
+-   Is every function actually a Function object?
+-   What are some examples of instance (...prototype.method()) methods on Function.
+-   What are some examples of instance (...prototype.method()) methods on Object.
+-   Can you give an example of the prototypal chain?
+
 ### 5. Subclassing with Factory Functions
 
 ### 6. Subclassing with New and Call
 
-### 7. Subclassing with class, extends and super
+### 7. Subclassing with class, extends and super:w
