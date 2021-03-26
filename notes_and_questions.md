@@ -38,7 +38,46 @@ function UserCreator(name, score) {
 -   When we use object.`__proto__` or `Object.getPrototypeOf(object)`, what is returned?
 -   If you don't use the 'new' keyword with the creator function, what does `this` refer to?
 
-### 3. Scope and this
+### 3. Scope, this and classes
+
+-   In the following code `userOne.increment()`, and where the increment function was defined as below
+
+```javascript
+UserCreator.prototype.increment = function () {
+    this.score += 1;
+};
+```
+
+what does `this` refer to?
+
+-   When and where is the object to the left of the dot assigned to `this`?
+-   When the method below is called, what does `this` refer to?
+
+```javascript
+UserCreator.prototype.increment = function () {
+    function add() {
+        this.score += 1;
+    }
+    add();
+};
+```
+
+-   Does this code above do what we think it should?
+-   There are three ways to fix this `this` problem, what are they (without looking below:) )?
+-   `this` in arrow functions refers to which this, for example below?
+
+```javascript
+UserCreator.prototype.increment = function () {
+    const add = () => {
+        this.score += 1;
+    };
+    add();
+};
+```
+
+-   What is the structure of a class in JS
+-   What is different under the hood between objects create using the UserCreator function with methods on it's prototype from those objects created using the class syntax?
+-   Do they both need `new`?
 
 ### 4. Default Prototype Chain
 
