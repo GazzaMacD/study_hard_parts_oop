@@ -1,8 +1,11 @@
 import { expect, test } from "@jest/globals";
+
 import {
     userOne,
     UserCreator,
     userFunctions,
+    PaidUserCreator,
+    paidUserOne,
 } from "./subclassing_factory_function.js";
 
 /*
@@ -19,7 +22,7 @@ test("method on increment to increase the value by one", () => {
     expect(userOne.score - preIncrementScore).toBe(1);
 });
 
-test("method login returns expected string", () => {
+test("method getIntroduction returns expected string", () => {
     const expected = "Hi, I'm John";
     expect(userOne.getIntroduction()).toBe(expected);
 });
@@ -34,4 +37,31 @@ test("Object.getPrototype returns userFunctionStore as prototype", () => {
 
 test("userOne.constructor returns Object", () => {
     expect(userOne.constructor).toBe(Object);
+});
+
+/*
+ *  paidUserOne Tests
+ */
+test("paidUserOne has correct values assigned to properties", () => {
+    expect(paidUserOne.name).toBe("Gareth");
+    expect(paidUserOne.score).toBe(10);
+    expect(paidUserOne.balance).toBe(100);
+});
+
+test("increment method on  paidUserOne to increase the value by one", () => {
+    let preIncrementScore = paidUserOne.score;
+    paidUserOne.incrementScore();
+    expect(paidUserOne.score - preIncrementScore).toBe(1);
+});
+
+test("method getIntroduction returns expected string", () => {
+    const expected = "Hi, I'm Gareth";
+    expect(paidUserOne.getIntroduction()).toBe(expected);
+});
+
+test("increaseBalance increases balance by passed argument amount", () => {
+    let preIncreaseBalance = paidUserOne.balance;
+    let amount = 10;
+    paidUserOne.increaseBalance(amount);
+    expect(paidUserOne.balance - preIncreaseBalance).toBe(amount);
 });

@@ -89,6 +89,11 @@ UserCreator.prototype.increment = function () {
 
 ### 5. Subclassing with Factory Functions
 
+-   If we create an object with some functions on it, how would we then create an empty object whose `__proto__` refers to the above object with the functions?
+-   If we want the another object of functions to have a link to the above object of functions how would be do that?
+-   What do call and apply allow us to do?
+-   What is the difference between the two?
+
 ### 6. Subclassing with New and Call
 
 ### 7. Subclassing with class, extends and super:w
