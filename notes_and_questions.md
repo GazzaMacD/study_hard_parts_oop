@@ -96,4 +96,44 @@ UserCreator.prototype.increment = function () {
 
 ### 6. Subclassing with New and Call
 
+```js
+function UserCreator(name, score) {
+    this.name = name;
+    this.score = score;
+}
+
+UserCreator.prototype.getIntroduction = function () {
+    return `Hi, I'm ${this.name}`;
+};
+
+UserCreator.prototype.incrementScore = function () {
+    this.score += 1;
+};
+
+const userOne = new UserCreator("John", 10);
+
+function PaidUserCreator(name, score, accBalance) {
+    UserCreator.call(this, name, score);
+    // Could use .apply with UserCreator.apply(this, [name, score])
+    this.balance = accBalance;
+}
+// Set the prototype of PaidUserCretor
+PaidUserCreator.prototype = Object.create(UserCreator.prototype);
+// Add the new Paid User Functions to prototype
+PaidUserCreator.prototype.increaseBalance = function (amount) {
+    this.balance += amount;
+};
+
+const paidUserOne = new PaidUserCreator("Gareth", 10, 100);
+```
+
+-   In the code above:
+    -   Why does the code use call in PaidUserCreator?
+    -   `this` passed to UserCreator.call() comes from where?
+    -   Can you explain what is happening in the line
+
+```js
+PaidUserCreator.prototype = Object.create(UserCreator.prototype);
+```
+
 ### 7. Subclassing with class, extends and super:w
