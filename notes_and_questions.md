@@ -136,4 +136,7 @@ const paidUserOne = new PaidUserCreator("Gareth", 10, 100);
 PaidUserCreator.prototype = Object.create(UserCreator.prototype);
 ```
 
-### 7. Subclassing with class, extends and super:w
+### 7. Subclassing with class, extends and super
+
+-   What does extends do, two things?
+-   What is `super` actually doing? Can you explain it fully?
